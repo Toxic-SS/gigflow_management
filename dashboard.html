@@ -1,0 +1,670 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Gigfloww Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    /* Nav link base style */
+    .nav-link {
+      @apply rounded-full px-4 py-1.5 font-semibold cursor-pointer transition-colors duration-200;
+    }
+    /* Inactive nav links */
+    .nav-link.inactive {
+      @apply text-white hover:underline bg-transparent;
+    }
+    /* Active nav link */
+    .nav-link.active {
+      @apply bg-white text-[#6E8BFF];
+    }
+  </style>
+</head>
+<body class="bg-[#F9FAFB] text-gray-900">
+  <!-- Navbar -->
+  <header
+    class="flex items-center justify-between bg-gradient-to-r from-[#A3BFFA] to-[#6E8BFF] rounded-3xl px-6 py-3 mx-4 mt-4 select-none"
+  >
+    <div class="flex items-center space-x-3">
+      <img
+        alt="Gigfloww logo blue stylized G letter"
+        class="w-8 h-8"
+        height="32"
+        src="https://storage.googleapis.com/a1aa/image/0278e839-fc6a-403a-0a23-3384be20e792.jpg"
+        width="32"
+      />
+      <span class="text-white font-semibold text-lg">GIGFLOWW</span>
+      <nav class="flex space-x-6 ml-6 text-sm font-medium">
+        <a href="dashboard.html" class="nav-link active" data-link="dashboard">Dashboard</a>
+        <a href="people.html" class="nav-link inactive" data-link="people">People</a>
+        <a href="hiring.html" class="nav-link inactive" data-link="hiring">Hiring</a>
+        <a href="salary.html" class="nav-link inactive" data-link="salary">Salary</a>
+        <a href="reviews.html" class="nav-link inactive" data-link="reviews">Reviews</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-6 border-l border-white border-opacity-40 pl-6">
+      <button
+        aria-label="Settings"
+        class="text-white text-lg hover:text-gray-200 focus:outline-none"
+        onclick="window.location.href='settings.html'"
+      >
+        <i class="fas fa-cog"></i>
+      </button>
+      <button
+        aria-label="Notifications"
+        class="relative text-white text-lg hover:text-gray-200 focus:outline-none"
+        onclick="window.location.href='notifications.html'"
+      >
+        <i class="fas fa-bell"></i>
+        <span
+          class="absolute -top-1 -right-2 bg-red-600 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center"
+          >4</span
+        >
+      </button>
+      <img
+        alt="Profile picture of a woman with dark skin and short hair"
+        class="w-10 h-10 rounded-full object-cover cursor-pointer"
+        height="40"
+        src="https://storage.googleapis.com/a1aa/image/9c6779d9-4820-44a4-1df0-392a5154ddac.jpg"
+        width="40"
+        onclick="window.location.href='profile.html'"
+      />
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 space-y-6">
+    <!-- Info banner -->
+    <section
+      class="flex items-center space-x-4 bg-white border border-gray-200 rounded-lg py-3 px-4 shadow-sm"
+    >
+      <div
+        class="flex items-center justify-center w-9 h-9 rounded-full bg-blue-600 text-white text-lg"
+      >
+        <i class="fas fa-bolt"></i>
+      </div>
+      <p class="text-sm font-normal text-gray-900 max-w-4xl">
+        Optimize your experience on Gigfloww- track your job post, manage teams
+        and streamline hr operations effortlessly today!
+      </p>
+    </section>
+    <!-- Welcome and date -->
+    <section
+      class="flex flex-col sm:flex-row justify-between items-start sm:items-center"
+    >
+      <h1 class="text-2xl font-semibold leading-tight text-gray-900">
+        Welcome Back, Nuraj group
+      </h1>
+      <div
+        class="mt-3 sm:mt-0 inline-flex items-center space-x-2 border border-gray-300 rounded-md px-3 py-2 text-gray-700 text-sm select-none"
+      >
+        <i class="far fa-calendar-alt text-lg"></i>
+        <span>Wed 23, May 2025</span>
+      </div>
+    </section>
+    <!-- Stats cards -->
+    <section
+      aria-label="Summary statistics"
+      class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl"
+    >
+      <!-- Employees -->
+      <article
+        class="bg-white rounded-lg border border-gray-200 p-4 flex flex-col justify-between"
+      >
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="text-sm font-normal text-gray-900 mb-1">Employees</p>
+            <p class="text-2xl font-semibold text-gray-900">24</p>
+          </div>
+          <div
+            aria-hidden="true"
+            class="w-8 h-8 rounded-full bg-purple-200 flex items-center justify-center text-purple-700 text-lg"
+          >
+            <i class="fas fa-users"></i>
+          </div>
+        </div>
+        <hr class="my-3 border-gray-200" />
+        <a
+          class="text-blue-700 text-sm font-medium flex items-center space-x-1"
+          href="employees.html"
+          >View Details <i class="fas fa-arrow-right"></i
+        ></a>
+      </article>
+      <!-- Hiring -->
+      <article
+        class="bg-white rounded-lg border border-gray-200 p-4 flex flex-col justify-between"
+      >
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="text-sm font-normal text-gray-900 mb-1">Hiring</p>
+            <p class="text-2xl font-semibold text-gray-900">5</p>
+          </div>
+          <div
+            aria-hidden="true"
+            class="w-8 h-8 rounded-full bg-blue-200 flex items-center justify-center text-blue-700 text-lg"
+          >
+            <i class="fas fa-sitemap"></i>
+          </div>
+        </div>
+        <hr class="my-3 border-gray-200" />
+        <a
+          class="text-blue-700 text-sm font-medium flex items-center space-x-1"
+          href="hiring.html"
+          >View Details <i class="fas fa-arrow-right"></i
+        ></a>
+      </article>
+      <!-- Projects -->
+      <article
+        class="bg-white rounded-lg border border-gray-200 p-4 flex flex-col justify-between"
+      >
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="text-sm font-normal text-gray-900 mb-1">Projects</p>
+            <p class="text-2xl font-semibold text-gray-900">1</p>
+          </div>
+          <div
+            aria-hidden="true"
+            class="w-8 h-8 rounded-full bg-green-200 flex items-center justify-center text-green-700 text-lg"
+          >
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+        </div>
+        <hr class="my-3 border-gray-200" />
+        <a
+          class="text-blue-700 text-sm font-medium flex items-center space-x-1"
+          href="projects.html"
+          >View Details <i class="fas fa-arrow-right"></i
+        ></a>
+      </article>
+    </section>
+    <!-- Performance report and upcoming actions -->
+    <section
+      aria-label="Performance report and upcoming actions"
+      class="flex flex-col lg:flex-row gap-6 max-w-7xl"
+    >
+      <!-- Performance report -->
+      <article
+        class="bg-white rounded-lg border border-gray-200 p-4 flex-1 max-w-4xl"
+      >
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold text-gray-900">Performance Report</h2>
+          <select
+            id="frequencySelect"
+            aria-label="Select report frequency"
+            class="text-sm font-medium text-gray-700 bg-gray-100 rounded-full px-3 py-1 hover:bg-gray-200 focus:outline-none cursor-pointer"
+          >
+            <option value="weekly" selected>Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+          </select>
+        </div>
+        <svg
+          aria-hidden="true"
+          class="w-full h-48"
+          fill="none"
+          viewBox="0 0 720 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6E8BFF" stop-opacity="0.5"></stop>
+              <stop offset="1" stop-color="#6E8BFF" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            id="graphPath"
+            d="M0 60C30 55 60 35 90 80C120 120 150 80 180 75C210 70 240 65 270 70C300 75 330 70 360 60C390 50 420 55 450 60C480 65 510 60 540 55C570 50 600 75 630 80C660 85 690 70 720 65V200H0V60Z"
+            fill="url(#gradient)"
+            stroke="#6E8BFF"
+            stroke-width="2"
+          ></path>
+        </svg>
+        <div
+          id="labelsContainer"
+          class="grid grid-cols-7 text-xs text-gray-400 mt-2 select-none"
+        >
+          <div class="text-center">Monday</div>
+          <div class="text-center">Tuesday</div>
+          <div class="text-center">Wednesday</div>
+          <div class="text-center">Thursday</div>
+          <div class="text-center">Friday</div>
+          <div class="text-center">Saturday</div>
+          <div class="text-center">Sunday</div>
+        </div>
+      </article>
+      <!-- Upcoming actions -->
+      <aside
+        aria-label="Upcoming actions"
+        class="bg-white rounded-lg border border-gray-200 p-4 w-full max-w-xs flex flex-col"
+      >
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-base font-semibold text-gray-900">Upcoming Actions</h3>
+          <button
+            aria-label="Upcoming actions calendar"
+            class="text-gray-600 hover:text-gray-900 focus:outline-none"
+          >
+            <i class="far fa-calendar-alt text-lg"></i>
+          </button>
+        </div>
+        <ul class="divide-y divide-gray-200 overflow-y-auto max-h-[420px]">
+          <li class="py-3">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-16 flex flex-col items-end text-xs text-gray-500 font-semibold select-none"
+              >
+                <span class="text-gray-900">03:30 pm</span>
+                <span>04:30 pm</span>
+              </div>
+              <div class="flex-1 border-l border-gray-300 pl-3">
+                <p class="text-xs text-gray-400 font-semibold select-none">
+                  Internal Meeting
+                </p>
+                <p class="text-sm font-normal text-gray-900 leading-tight">
+                  Internal Meeting with Jade Sapphire- UI designer
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="py-3">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-16 flex flex-col items-end text-xs text-gray-500 font-semibold select-none"
+              >
+                <span class="text-gray-900">05:00 pm</span>
+                <span>05:30 pm</span>
+              </div>
+              <div class="flex-1 border-l border-gray-300 pl-3">
+                <p class="text-xs text-gray-400 font-semibold select-none">
+                  Internal Meeting
+                </p>
+                <p class="text-sm font-normal text-gray-900 leading-tight">
+                  Internal Meeting with Content team
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="py-3">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-16 flex flex-col items-end text-xs text-gray-500 font-semibold select-none"
+              >
+                <span class="text-gray-900">07:00 pm</span>
+                <span>05:30 pm</span>
+              </div>
+              <div class="flex-1 border-l border-gray-300 pl-3">
+                <p class="text-xs text-gray-400 font-semibold select-none">Interview</p>
+                <p class="text-sm font-normal text-gray-900 leading-tight">
+                  Interview with Achyut - UI intern
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="py-3">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-16 flex flex-col items-end text-xs text-gray-500 font-semibold select-none"
+              >
+                <span class="text-gray-900">05:00 pm</span>
+                <span>05:30 pm</span>
+              </div>
+              <div class="flex-1 border-l border-gray-300 pl-3">
+                <p class="text-xs text-gray-400 font-semibold select-none">
+                  Internal Meeting
+                </p>
+                <p class="text-sm font-normal text-gray-900 leading-tight">
+                  Internal Meeting with Content team
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="py-3">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-16 flex flex-col items-end text-xs text-gray-500 font-semibold select-none"
+              >
+                <span class="text-gray-900">05:00 pm</span>
+                <span>05:30 pm</span>
+              </div>
+              <div class="flex-1 border-l border-gray-300 pl-3">
+                <p class="text-xs text-gray-400 font-semibold select-none">
+                  Internal Meeting
+                </p>
+                <p class="text-sm font-normal text-gray-900 leading-tight">
+                  Internal Meeting with Content team
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="py-3">
+            <div class="flex items-center space-x-3">
+              <div
+                class="w-16 flex flex-col items-end text-xs text-gray-500 font-semibold select-none"
+              >
+                <span class="text-gray-900">05:00 pm</span>
+                <span>05:30 pm</span>
+              </div>
+              <div class="flex-1 border-l border-gray-300 pl-3">
+                <p class="text-xs text-gray-400 font-semibold select-none">
+                  Internal Meeting
+                </p>
+                <p class="text-sm font-normal text-gray-900 leading-tight">
+                  Internal Meeting with Content team
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </section>
+    <!-- Incoming Application -->
+    <section
+      aria-label="Incoming Application"
+      class="bg-white rounded-lg border border-gray-200 p-6 max-w-7xl"
+    >
+      <div
+        class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4"
+      >
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">Incoming Application</h3>
+          <p class="text-sm text-gray-600">Manage application for your job posting</p>
+        </div>
+        <div class="flex space-x-3 mt-3 sm:mt-0">
+          <button
+            aria-label="Filter applications"
+            class="flex items-center space-x-2 border border-gray-300 rounded-md px-3 py-2 text-gray-700 text-sm hover:bg-gray-100 focus:outline-none"
+            onclick="window.location.href='filter.html'"
+          >
+            <i class="fas fa-sliders-h text-base"></i>
+            <span>Filter</span>
+          </button>
+          <button
+            class="bg-gradient-to-r from-[#2B6CB0] to-[#2C5282] text-white rounded-md px-5 py-2 text-sm font-semibold hover:opacity-90 focus:outline-none"
+            onclick="window.location.href='applications.html'"
+          >
+            See all
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+        <!-- Applicant 1 -->
+        <article
+          aria-label="Applicant Elizabeth Filade"
+          class="border border-gray-200 rounded-lg p-4 flex flex-col space-y-3"
+        >
+          <div class="flex items-center space-x-3">
+            <img
+              alt="Portrait of Elizabeth Filade, a woman with dark skin and short hair"
+              class="w-10 h-10 rounded-md object-cover"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/2342ae57-d648-44ca-b3b1-4cea242240fb.jpg"
+              width="40"
+            />
+            <div>
+              <p class="text-sm font-semibold text-gray-900 leading-tight">
+                Elizabeth Filade
+              </p>
+              <p class="text-xs text-gray-400 select-none">3 years in Software Development</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-900 mb-1">Latest Experience</p>
+            <div class="flex items-center space-x-2">
+              <img
+                alt="Tucker Inc company logo, red square with white T letter"
+                class="w-6 h-6 rounded"
+                height="24"
+                src="https://storage.googleapis.com/a1aa/image/e03e4c6b-02e2-4589-ad3f-6740d3baeac0.jpg"
+                width="24"
+              />
+              <div class="text-xs text-gray-500 select-none">
+                <p>Tucker Inc</p>
+                <p class="text-[9px]">12 Dec 2024 - 10 May 2025</p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="text-blue-700 text-sm font-medium flex items-center space-x-1 mt-auto"
+            href="resume-elizabeth.html"
+          >
+            <span>View Resume</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+        <!-- Applicant 2 -->
+        <article
+          aria-label="Applicant Andre Suares"
+          class="border border-gray-200 rounded-lg p-4 flex flex-col space-y-3"
+        >
+          <div class="flex items-center space-x-3">
+            <img
+              alt="Portrait of Andre Suares, a man with medium skin and short hair"
+              class="w-10 h-10 rounded-md object-cover"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/afeb6ea2-211d-4880-f3cd-d5b05fe19e56.jpg"
+              width="40"
+            />
+            <div>
+              <p class="text-sm font-semibold text-gray-900 leading-tight">Andre Suares</p>
+              <p class="text-xs text-gray-400 select-none">3 years in Software Development</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-900 mb-1">Latest Experience</p>
+            <div class="flex items-center space-x-2">
+              <img
+                alt="Tucker Inc company logo, orange square with black T letter"
+                class="w-6 h-6 rounded"
+                height="24"
+                src="https://storage.googleapis.com/a1aa/image/afd62842-2cc7-4e0a-c7e8-1c2a5e1dc03b.jpg"
+                width="24"
+              />
+              <div class="text-xs text-gray-500 select-none">
+                <p>Tucker Inc</p>
+                <p class="text-[9px]">12 Dec 2024 - 10 May 2025</p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="text-blue-700 text-sm font-medium flex items-center space-x-1 mt-auto"
+            href="resume-andre.html"
+          >
+            <span>View Resume</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+        <!-- Applicant 3 -->
+        <article
+          aria-label="Applicant Ishita Ashuth"
+          class="border border-gray-200 rounded-lg p-4 flex flex-col space-y-3"
+        >
+          <div class="flex items-center space-x-3">
+            <img
+              alt="Portrait of Ishita Ashuth, a woman with medium skin and long hair"
+              class="w-10 h-10 rounded-md object-cover"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/5b818de4-2997-4bf3-5f08-9d2334508045.jpg"
+              width="40"
+            />
+            <div>
+              <p class="text-sm font-semibold text-gray-900 leading-tight">Ishita Ashuth</p>
+              <p class="text-xs text-gray-400 select-none">3 years in Software Development</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-900 mb-1">Latest Experience</p>
+            <div class="flex items-center space-x-2">
+              <img
+                alt="Tucker Inc company logo, dark blue square with white T letter"
+                class="w-6 h-6 rounded"
+                height="24"
+                src="https://storage.googleapis.com/a1aa/image/a3a56cc5-d634-4a4f-bde6-5f4040583549.jpg"
+                width="24"
+              />
+              <div class="text-xs text-gray-500 select-none">
+                <p>Tucker Inc</p>
+                <p class="text-[9px]">12 Dec 2024 - 10 May 2025</p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="text-blue-700 text-sm font-medium flex items-center space-x-1 mt-auto"
+            href="resume-ishita.html"
+          >
+            <span>View Resume</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+        <!-- Applicant 4 -->
+        <article
+          aria-label="Applicant Ishita Ashuth"
+          class="border border-gray-200 rounded-lg p-4 flex flex-col space-y-3"
+        >
+          <div class="flex items-center space-x-3">
+            <img
+              alt="Portrait of Ishita Ashuth, a woman with medium skin and long hair"
+              class="w-10 h-10 rounded-md object-cover"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/5b818de4-2997-4bf3-5f08-9d2334508045.jpg"
+              width="40"
+            />
+            <div>
+              <p class="text-sm font-semibold text-gray-900 leading-tight">Ishita Ashuth</p>
+              <p class="text-xs text-gray-400 select-none">3 years in Software Development</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-900 mb-1">Latest Experience</p>
+            <div class="flex items-center space-x-2">
+              <img
+                alt="Tucker Inc company logo, dark blue square with white T letter"
+                class="w-6 h-6 rounded"
+                height="24"
+                src="https://storage.googleapis.com/a1aa/image/a3a56cc5-d634-4a4f-bde6-5f4040583549.jpg"
+                width="24"
+              />
+              <div class="text-xs text-gray-500 select-none">
+                <p>Tucker Inc</p>
+                <p class="text-[9px]">12 Dec 2024 - 10 May 2025</p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="text-blue-700 text-sm font-medium flex items-center space-x-1 mt-auto"
+            href="resume-ishita.html"
+          >
+            <span>View Resume</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const frequencySelect = document.getElementById("frequencySelect");
+    const labelsContainer = document.getElementById("labelsContainer");
+    const graphPath = document.getElementById("graphPath");
+    const navLinks = document.querySelectorAll("nav a.nav-link");
+
+    // Data for different frequencies
+    const data = {
+      weekly: {
+        labels: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        path:
+          "M0 60C30 55 60 35 90 80C120 120 150 80 180 75C210 70 240 65 270 70C300 75 330 70 360 60C390 50 420 55 450 60C480 65 510 60 540 55C570 50 600 75 630 80C660 85 690 70 720 65V200H0V60Z",
+      },
+      monthly: {
+        labels: [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+        ],
+        path:
+          "M0 70C20 60 40 50 60 80 80 110 100 90 120 100 140 120 160 110 180 130 200 140 220 130 240 150 260 140 280 160 300 150 320 170 340 160 360 180 380 170 400 190 420 180 440 200 460 190 480 210 500 200 520 220 540 210 560 230 580 220 600 240 620 230 640 250 660 240 680 260 700 250 720 270V200H0V70Z",
+      },
+      yearly: {
+        labels: ["2020", "2021", "2022", "2023", "2024", "2025"],
+        path:
+          "M0 100C120 90 240 80 360 70 480 60 600 50 720 40V200H0V100Z",
+      },
+    };
+
+    function updateGraph() {
+      const freq = frequencySelect.value;
+      // Clear existing labels
+      labelsContainer.innerHTML = "";
+
+      // Set new labels grid columns based on label count
+      labelsContainer.style.gridTemplateColumns = `repeat(${data[freq].labels.length}, minmax(0, 1fr))`;
+
+      // Add new labels
+      data[freq].labels.forEach((label) => {
+        const div = document.createElement("div");
+        div.className = "text-center";
+        div.textContent = label;
+        labelsContainer.appendChild(div);
+      });
+
+      // Update path
+      graphPath.setAttribute("d", data[freq].path);
+    }
+
+    frequencySelect.addEventListener("change", updateGraph);
+
+    // Initialize graph on page load
+    updateGraph();
+
+    // Nav link click handler to update active state
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        navLinks.forEach((l) => {
+          l.classList.remove("active");
+          l.classList.add("inactive");
+        });
+        e.currentTarget.classList.add("active");
+        e.currentTarget.classList.remove("inactive");
+        // Navigation handled by href, no preventDefault
+      });
+    });
+  </script>
+  <script>
+  const currentPage = window.location.pathname.split('/').pop();
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  navLinks.forEach(link => {
+    // Remove highlight classes from all links first
+    link.classList.remove('bg-white', 'text-[#0B3B5A]', 'rounded-full', 'px-5', 'py-1.5', 'font-semibold', 'text-sm');
+
+    // If href matches current page, add highlight classes
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('bg-white', 'text-[#0B3B5A]', 'rounded-full', 'px-5', 'py-1.5', 'font-semibold', 'text-sm');
+    }
+  });
+</script>
+</body>
+</html>

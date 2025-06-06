@@ -1,0 +1,418 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Gigfloww People List
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#F9FAFB] min-h-screen">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between bg-[#1E73BE] rounded-r-[30px] px-6 py-3 max-w-[1200px] mx-auto mt-6">
+   <div class="flex items-center space-x-3">
+    <img alt="Gigfloww logo with blue background and white G letter" class="w-8 h-8" height="32" src="https://storage.googleapis.com/a1aa/image/de3917f7-1cac-47ad-d5a2-dd0b0493c620.jpg" width="32"/>
+    <span class="text-white font-semibold text-lg tracking-wide select-none">
+     GIGFLOWW
+    </span>
+   </div>
+   <ul class="hidden sm:flex items-center space-x-8 text-white text-sm font-normal ml-10">
+  <li><a href="dashboard.html" class="cursor-pointer select-none">Dashboard</a></li>
+  <li><a href="Hiring.html" class="cursor-pointer select-none">Hiring</a></li>
+  <li>
+    
+  </li>
+  <li><a href="salary.html" class="cursor-pointer select-none">Salary</a></li>
+  <li><a href="reviews.html" class="cursor-pointer select-none">Reviews</a></li>
+</ul>
+
+   <div class="flex items-center space-x-6 border-l border-[#0F4A7B] pl-6 ml-6">
+    <button aria-label="Settings" class="text-white text-lg hover:text-[#A9D1FF] focus:outline-none">
+     <i class="fas fa-cog">
+     </i>
+    </button>
+    <button aria-label="Notifications" class="relative text-white text-lg hover:text-[#A9D1FF] focus:outline-none">
+     <i class="fas fa-bell">
+     </i>
+     <span class="absolute -top-1 -right-1 bg-[#E03E3E] text-[10px] font-semibold text-white rounded-full w-4 h-4 flex items-center justify-center">
+      4
+     </span>
+    </button>
+    <img alt="Profile picture of a woman with dark skin and short hair" class="w-10 h-10 rounded-full object-cover" height="40" src="https://storage.googleapis.com/a1aa/image/34c7abce-811c-402e-2b59-f92d55d7a9a9.jpg" width="40"/>
+   </div>
+  </nav>
+  <main class="max-w-[1200px] mx-auto mt-10 px-4 sm:px-6 lg:px-8">
+   <div class="flex justify-between items-center mb-6">
+    <h1 class="text-xl font-normal text-[#1E1E1E] select-none">
+     List of people
+    </h1>
+    <button class="bg-gradient-to-r from-[#1E73BE] to-[#0F4A7B] text-white rounded-md px-5 py-2 text-sm font-normal select-none hover:brightness-110 transition">
+     Add new member
+    </button>
+   </div>
+   <div class="flex flex-wrap justify-between items-center mb-4 gap-3">
+    <div class="flex items-center bg-white rounded-lg border border-[#D1D5DB] px-4 py-2 w-full max-w-[320px]">
+     <i class="fas fa-search text-[#6B7280] text-base">
+     </i>
+     <input class="ml-3 w-full text-sm text-[#6B7280] placeholder-[#6B7280] focus:outline-none" placeholder="Search" type="text"/>
+    </div>
+    <button class="flex items-center space-x-1 bg-white border border-[#D1D5DB] rounded-lg px-4 py-2 text-sm text-[#374151] select-none hover:bg-[#F3F4F6] transition">
+     <span>
+      Type
+     </span>
+     <i class="fas fa-chevron-down text-xs">
+     </i>
+    </button>
+    <button class="flex items-center space-x-1 bg-white border border-[#D1D5DB] rounded-lg px-4 py-2 text-sm text-[#374151] select-none hover:bg-[#F3F4F6] transition">
+     <span>
+      Role
+     </span>
+     <i class="fas fa-chevron-down text-xs">
+     </i>
+    </button>
+    <button class="flex items-center space-x-1 bg-white border border-[#D1D5DB] rounded-lg px-4 py-2 text-sm text-[#374151] select-none hover:bg-[#F3F4F6] transition">
+     <i class="fas fa-sliders-h text-sm">
+     </i>
+     <span>
+      Advanced Filter
+     </span>
+     <i class="fas fa-chevron-down text-xs">
+     </i>
+    </button>
+    <div class="ml-auto flex items-center space-x-1 text-sm text-[#1E1E1E] select-none cursor-pointer">
+     <span>
+      Export
+     </span>
+     <i class="fas fa-external-link-alt">
+     </i>
+    </div>
+   </div>
+   <div class="overflow-x-auto rounded-lg shadow-sm border border-[#E5E7EB] bg-white">
+    <table class="min-w-full divide-y divide-[#E5E7EB]">
+     <thead class="bg-[#F9FAFB]">
+      <tr>
+       <th class="px-6 py-3 text-left text-xs font-normal text-[#6B7280]">
+        <input aria-label="Select all" type="checkbox"/>
+       </th>
+       <th class="px-6 py-3 text-left text-xs font-normal text-[#6B7280]">
+        Name
+       </th>
+       <th class="px-6 py-3 text-left text-xs font-normal text-[#6B7280]">
+        Job Title
+       </th>
+       <th class="px-6 py-3 text-left text-xs font-normal text-[#6B7280]">
+        Department
+       </th>
+       <th class="px-6 py-3 text-left text-xs font-normal text-[#6B7280]">
+        Salary
+       </th>
+       <th class="px-6 py-3 text-left text-xs font-normal text-[#6B7280]">
+        Start Date
+       </th>
+       <th class="px-6 py-3 text-left text-xs font-normal text-[#6B7280]">
+        Life Cycle
+       </th>
+       <th class="px-6 py-3 text-left text-xs font-normal text-[#6B7280]">
+        Status
+       </th>
+      </tr>
+     </thead>
+     <tbody class="divide-y divide-[#E5E7EB] text-[#1E1E1E] text-sm">
+      <tr>
+       <td class="px-6 py-4">
+        <input aria-label="Select Alicia Shankur" type="checkbox"/>
+       </td>
+       <td class="px-6 py-4">
+        <p class="font-semibold">
+         Alicia Shankur
+        </p>
+        <p class="text-[10px] text-[#6B7280] select-text">
+         alicia shankur@gmail.com
+        </p>
+       </td>
+       <td class="px-6 py-4">
+        Software Engineer
+       </td>
+       <td class="px-6 py-4">
+        Engineering
+       </td>
+       <td class="px-6 py-4">
+        $2,500
+       </td>
+       <td class="px-6 py-4">
+        Mar 16, 2023
+       </td>
+       <td class="px-6 py-4">
+        Hired
+       </td>
+       <td class="px-6 py-4">
+        <span class="inline-block bg-[#D9F2D9] text-[#3B9B3B] text-xs font-semibold rounded-full px-3 py-1 select-none">
+         Active
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td class="px-6 py-4">
+        <input aria-label="Select James Oyinkan" type="checkbox"/>
+       </td>
+       <td class="px-6 py-4">
+        <p class="font-semibold">
+         James Oyinkan
+        </p>
+        <p class="text-[10px] text-[#6B7280] select-text">
+         jamesoyinkan@gmail.com
+        </p>
+       </td>
+       <td class="px-6 py-4">
+        Visual Designer
+       </td>
+       <td class="px-6 py-4">
+        Design
+       </td>
+       <td class="px-6 py-4">
+        $2,000
+       </td>
+       <td class="px-6 py-4">
+        Jan 16, 2023
+       </td>
+       <td class="px-6 py-4">
+        Hired
+       </td>
+       <td class="px-6 py-4">
+        <span class="inline-block bg-[#D9F2D9] text-[#3B9B3B] text-xs font-semibold rounded-full px-3 py-1 select-none">
+         Active
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td class="px-6 py-4">
+        <input aria-label="Select Diti Shreyas" type="checkbox"/>
+       </td>
+       <td class="px-6 py-4">
+        <p class="font-semibold">
+         Diti Shreyas
+        </p>
+        <p class="text-[10px] text-[#6B7280] select-text">
+         ditishreyas@gmail.com
+        </p>
+       </td>
+       <td class="px-6 py-4">
+        Visual Designer
+       </td>
+       <td class="px-6 py-4">
+        Design
+       </td>
+       <td class="px-6 py-4">
+        $2,000
+       </td>
+       <td class="px-6 py-4">
+        Dec 09, 2024
+       </td>
+       <td class="px-6 py-4">
+        Employed
+       </td>
+       <td class="px-6 py-4">
+        <span class="inline-block bg-[#F7D9D9] text-[#E03E3E] text-xs font-semibold rounded-full px-3 py-1 select-none">
+         Inactive
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td class="px-6 py-4">
+        <input aria-label="Select Ishita Bhatgnar" type="checkbox"/>
+       </td>
+       <td class="px-6 py-4">
+        <p class="font-semibold">
+         Ishita Bhatgnar
+        </p>
+        <p class="text-[10px] text-[#6B7280] select-text">
+         ishitadgir67@gmail.com
+        </p>
+       </td>
+       <td class="px-6 py-4">
+        UI/UX Designer
+       </td>
+       <td class="px-6 py-4">
+        Design
+       </td>
+       <td class="px-6 py-4">
+        $1,500
+       </td>
+       <td class="px-6 py-4">
+        Jan 09, 2024
+       </td>
+       <td class="px-6 py-4">
+        Employed
+       </td>
+       <td class="px-6 py-4">
+        <span class="inline-block bg-[#D9F2D9] text-[#3B9B3B] text-xs font-semibold rounded-full px-3 py-1 select-none">
+         Active
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td class="px-6 py-4">
+        <input aria-label="Select Kito Ashuth" type="checkbox"/>
+       </td>
+       <td class="px-6 py-4">
+        <p class="font-semibold">
+         Kito Ashuth
+        </p>
+        <p class="text-[10px] text-[#6B7280] select-text">
+         asthutor@gmail.com
+        </p>
+       </td>
+       <td class="px-6 py-4">
+        Content Writer
+       </td>
+       <td class="px-6 py-4">
+        Content
+       </td>
+       <td class="px-6 py-4">
+        $1,000
+       </td>
+       <td class="px-6 py-4">
+        Jan 09, 2024
+       </td>
+       <td class="px-6 py-4">
+        Hired
+       </td>
+       <td class="px-6 py-4">
+        <span class="inline-block bg-[#D9F2D9] text-[#3B9B3B] text-xs font-semibold rounded-full px-3 py-1 select-none">
+         Active
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td class="px-6 py-4">
+        <input aria-label="Select Dario Berik" type="checkbox"/>
+       </td>
+       <td class="px-6 py-4">
+        <p class="font-semibold">
+         Dario Berik
+        </p>
+        <p class="text-[10px] text-[#6B7280] select-text">
+         darioberik@yahoo.com
+        </p>
+       </td>
+       <td class="px-6 py-4">
+        Sales Manager
+       </td>
+       <td class="px-6 py-4">
+        Operation
+       </td>
+       <td class="px-6 py-4">
+        $4,000
+       </td>
+       <td class="px-6 py-4">
+        Feb 21, 2022
+       </td>
+       <td class="px-6 py-4">
+        Hired
+       </td>
+       <td class="px-6 py-4">
+        <span class="inline-block bg-[#D9F2D9] text-[#3B9B3B] text-xs font-semibold rounded-full px-3 py-1 select-none">
+         Active
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td class="px-6 py-4">
+        <input aria-label="Select Aresen Vlamadir" type="checkbox"/>
+       </td>
+       <td class="px-6 py-4">
+        <p class="font-semibold">
+         Aresen Vlamadir
+        </p>
+        <p class="text-[10px] text-[#6B7280] select-text">
+         darioberik@yahoo.com
+        </p>
+       </td>
+       <td class="px-6 py-4">
+        Mobile Assitant
+       </td>
+       <td class="px-6 py-4">
+        Product
+       </td>
+       <td class="px-6 py-4">
+        $3,000
+       </td>
+       <td class="px-6 py-4">
+        Aug 07, 2022
+       </td>
+       <td class="px-6 py-4">
+        Employed
+       </td>
+       <td class="px-6 py-4">
+        <span class="inline-block bg-[#F7D9D9] text-[#E03E3E] text-xs font-semibold rounded-full px-3 py-1 select-none">
+         Inactive
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td class="px-6 py-4">
+        <input aria-label="Select Debby Philade" type="checkbox"/>
+       </td>
+       <td class="px-6 py-4">
+        <p class="font-semibold">
+         Debby Philade
+        </p>
+        <p class="text-[10px] text-[#6B7280] select-text">
+         debbythegreat@gmail.com
+        </p>
+       </td>
+       <td class="px-6 py-4">
+        Product Manager
+       </td>
+       <td class="px-6 py-4">
+        Product
+       </td>
+       <td class="px-6 py-4">
+        $4,500
+       </td>
+       <td class="px-6 py-4">
+        Apr 02, 2022
+       </td>
+       <td class="px-6 py-4">
+        Hired
+       </td>
+       <td class="px-6 py-4">
+        <span class="inline-block bg-[#D9F2D9] text-[#3B9B3B] text-xs font-semibold rounded-full px-3 py-1 select-none">
+         Active
+        </span>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <nav aria-label="Pagination" class="mt-6 flex justify-end items-center space-x-2 select-none text-[#1E1E1E] text-sm font-normal">
+    <button aria-current="page" class="bg-[#1E73BE] text-white rounded-md w-9 h-9 flex items-center justify-center">
+     1
+    </button>
+    <button class="border border-[#1E73BE] rounded-md w-9 h-9 flex items-center justify-center hover:bg-[#F3F4F6]">
+     2
+    </button>
+    <button class="border border-[#1E73BE] rounded-md w-9 h-9 flex items-center justify-center hover:bg-[#F3F4F6]">
+     3
+    </button>
+    <button class="border border-[#1E73BE] rounded-md w-9 h-9 flex items-center justify-center hover:bg-[#F3F4F6]">
+     4
+    </button>
+    <button aria-label="Next page" class="bg-[#1E73BE] text-white rounded-md w-9 h-9 flex items-center justify-center">
+     <i class="fas fa-chevron-right">
+     </i>
+    </button>
+   </nav>
+  </main>
+  <script src="./js/nav-highlight.js"></script>
+ </body>
+ 
+</html>
